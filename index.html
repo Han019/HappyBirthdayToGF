@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,24 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Gowun+Batang:wght@400;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Dancing+Script:wght@400;700&display=swap"
+    rel="stylesheet">
 
   <style>
+    /* ===== 학교안심 몽글몽글 웹폰트 ===== */
+    @font-face {
+      font-family: 'SchoolSafeMonggleMonggle';
+      src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMonggeulmonggeulR.woff2') format('woff2');
+      font-weight: normal;
+      font-style: normal;
+      font-display: swap;
+    }
+
     /* ===== CSS RESET & BASE ===== */
-    *, *::before, *::after {
+    *,
+    *::before,
+    *::after {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
@@ -41,7 +55,7 @@
     }
 
     body {
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'SchoolSafeMonggleMonggle', 'Gowun Batang', sans-serif;
       background: var(--bg-dark);
       color: var(--text-light);
       overflow-x: hidden;
@@ -77,8 +91,8 @@
       position: absolute;
       inset: 0;
       background: radial-gradient(ellipse at center, rgba(255, 107, 157, 0.15) 0%, transparent 60%),
-                  radial-gradient(ellipse at 20% 80%, rgba(108, 92, 231, 0.1) 0%, transparent 50%),
-                  radial-gradient(ellipse at 80% 20%, rgba(249, 202, 36, 0.08) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 80%, rgba(108, 92, 231, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(249, 202, 36, 0.08) 0%, transparent 50%);
     }
 
     /* Floating particles in hero */
@@ -96,10 +110,23 @@
     }
 
     @keyframes floatParticle {
-      0% { transform: translateY(100vh) scale(0); opacity: 0; }
-      10% { opacity: 1; }
-      90% { opacity: 1; }
-      100% { transform: translateY(-20vh) scale(1); opacity: 0; }
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      90% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-20vh) scale(1);
+        opacity: 0;
+      }
     }
 
     /* Title animation */
@@ -112,8 +139,15 @@
     }
 
     @keyframes heroFadeIn {
-      0% { opacity: 0; transform: translateY(40px) scale(0.9); }
-      100% { opacity: 1; transform: translateY(0) scale(1); }
+      0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.9);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
     }
 
     .hero-emoji {
@@ -124,14 +158,24 @@
     }
 
     @keyframes bounceEmoji {
-      0%, 100% { transform: translateY(0) rotate(0deg); }
-      25% { transform: translateY(-20px) rotate(-5deg); }
-      75% { transform: translateY(-10px) rotate(5deg); }
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(0deg);
+      }
+
+      25% {
+        transform: translateY(-20px) rotate(-5deg);
+      }
+
+      75% {
+        transform: translateY(-10px) rotate(5deg);
+      }
     }
 
     .hero-title {
-      font-family: 'Dancing Script', cursive;
-      font-size: clamp(2.5rem, 8vw, 6rem);
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
       font-weight: 700;
       background: linear-gradient(135deg, var(--primary), var(--gold), var(--accent), var(--gold));
       background-size: 300% 300%;
@@ -141,18 +185,26 @@
       animation: gradientShift 4s ease infinite;
       text-shadow: none;
       filter: drop-shadow(0 0 30px rgba(255, 107, 157, 0.3));
-      line-height: 1.3;
+      line-height: 1.4;
     }
 
     @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+      0% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
+
+      100% {
+        background-position: 0% 50%;
+      }
     }
 
     .hero-subtitle {
-      font-family: 'Gowun Batang', serif;
-      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
+      font-size: clamp(1rem, 3vw, 1.4rem);
       color: var(--text-muted);
       margin-top: 1.5rem;
       opacity: 0;
@@ -161,16 +213,23 @@
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Scroll indicator */
     .scroll-indicator {
       position: absolute;
       bottom: 40px;
-      left: 50%;
-      transform: translateX(-50%);
+      left: 0;
+      right: 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -196,8 +255,17 @@
     }
 
     @keyframes scrollBounce {
-      0%, 100% { transform: rotate(45deg) translateY(0); opacity: 1; }
-      50% { transform: rotate(45deg) translateY(10px); opacity: 0.5; }
+
+      0%,
+      100% {
+        transform: rotate(45deg) translateY(0);
+        opacity: 1;
+      }
+
+      50% {
+        transform: rotate(45deg) translateY(10px);
+        opacity: 0.5;
+      }
     }
 
     /* ===== SECTION 2: 편지 봉투 ===== */
@@ -239,10 +307,23 @@
     }
 
     @keyframes floatHeart {
-      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
-      10% { opacity: 0.15; }
-      90% { opacity: 0.15; }
-      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+      0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.15;
+      }
+
+      90% {
+        opacity: 0.15;
+      }
+
+      100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+      }
     }
 
     .letter-intro {
@@ -260,14 +341,14 @@
     }
 
     .letter-intro h2 {
-      font-family: 'Dancing Script', cursive;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
       font-size: clamp(2rem, 5vw, 3.5rem);
       color: var(--primary);
       margin-bottom: 15px;
     }
 
     .letter-intro p {
-      font-family: 'Gowun Batang', serif;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
       color: var(--text-muted);
       font-size: 1.1rem;
     }
@@ -306,7 +387,7 @@
       background: linear-gradient(145deg, #e74c3c, #c0392b);
       border-radius: 0 0 12px 12px;
       box-shadow: 0 15px 50px rgba(231, 76, 60, 0.3),
-                  0 5px 20px rgba(0, 0, 0, 0.3);
+        0 5px 20px rgba(0, 0, 0, 0.3);
       overflow: hidden;
     }
 
@@ -339,8 +420,15 @@
     }
 
     @keyframes heartPulse {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
     }
 
     /* Envelope flap (triangle) */
@@ -372,13 +460,22 @@
       z-index: 2;
     }
 
-    .envelope-wrapper.visible ~ .envelope-click-hint {
+    .envelope-wrapper.visible~.envelope-click-hint {
       opacity: 1;
     }
 
     @keyframes pulse {
-      0%, 100% { opacity: 0.5; transform: translateY(0); }
-      50% { opacity: 1; transform: translateY(-5px); }
+
+      0%,
+      100% {
+        opacity: 0.5;
+        transform: translateY(0);
+      }
+
+      50% {
+        opacity: 1;
+        transform: translateY(-5px);
+      }
     }
 
     /* ===== LETTER MODAL ===== */
@@ -407,7 +504,7 @@
       border-radius: 4px;
       padding: 50px 40px 40px;
       box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5),
-                  inset 0 0 80px rgba(0, 0, 0, 0.03);
+        inset 0 0 80px rgba(0, 0, 0, 0.03);
       overflow-y: auto;
       transform: scale(0.5) translateY(100px);
       opacity: 0;
@@ -433,12 +530,10 @@
     .letter-paper-lines {
       position: absolute;
       inset: 0;
-      background-image: repeating-linear-gradient(
-        transparent,
-        transparent 35px,
-        var(--letter-line) 35px,
-        var(--letter-line) 36px
-      );
+      background-image: repeating-linear-gradient(transparent,
+          transparent 35px,
+          var(--letter-line) 35px,
+          var(--letter-line) 36px);
       opacity: 0.4;
       pointer-events: none;
     }
@@ -474,14 +569,14 @@
 
     .letter-date {
       text-align: right;
-      font-family: 'Gowun Batang', serif;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
       font-size: 0.9rem;
       color: #999;
       margin-bottom: 30px;
     }
 
     .letter-greeting {
-      font-family: 'Gowun Batang', serif;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
       font-size: 1.3rem;
       color: #444;
       margin-bottom: 25px;
@@ -489,7 +584,7 @@
     }
 
     .letter-body p {
-      font-family: 'Gowun Batang', serif;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
       font-size: 1.05rem;
       color: #555;
       line-height: 2.2;
@@ -499,7 +594,7 @@
 
     .letter-signature {
       text-align: right;
-      font-family: 'Dancing Script', cursive;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
       font-size: 1.5rem;
       color: var(--primary-dark);
       margin-top: 40px;
@@ -518,15 +613,15 @@
       border-radius: 3px;
     }
 
-    /* ===== SECTION 3: FOOTER ===== */
-    .footer {
-      text-align: center;
-      padding: 60px 20px;
-      background: var(--bg-dark);
+    /* ===== SECTION 3: MEMORIES GALLERY ===== */
+    .memories-section {
       position: relative;
+      padding: 100px 20px 80px;
+      background: var(--bg-dark);
+      overflow: hidden;
     }
 
-    .footer::before {
+    .memories-section::before {
       content: '';
       position: absolute;
       top: -100px;
@@ -534,6 +629,211 @@
       right: 0;
       height: 200px;
       background: linear-gradient(to bottom, var(--bg-section), var(--bg-dark));
+    }
+
+    .memories-header {
+      text-align: center;
+      margin-bottom: 60px;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .memories-header.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .memories-header h2 {
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .memories-header p {
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 10px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(60px) scale(0.95);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    .gallery-item:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 20px 50px rgba(255, 107, 157, 0.25),
+        0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 40px 20px 20px;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.75), transparent);
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery-item:hover .gallery-caption {
+      transform: translateY(0);
+    }
+
+    .gallery-caption p {
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
+      font-size: 0.95rem;
+      color: #fff;
+      text-align: center;
+    }
+
+    /* Placeholder style for empty gallery slots */
+    .gallery-item-placeholder {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      background: linear-gradient(135deg, rgba(255, 107, 157, 0.08), rgba(108, 92, 231, 0.08));
+      border: 2px dashed rgba(255, 107, 157, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .gallery-item-placeholder.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery-item-placeholder .placeholder-icon {
+      font-size: 2.5rem;
+      opacity: 0.4;
+    }
+
+    .gallery-item-placeholder .placeholder-text {
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      opacity: 0.5;
+    }
+
+    /* Lightbox for full-size photo viewing */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      transition: background 0.4s ease;
+    }
+
+    .lightbox-overlay.active {
+      background: rgba(0, 0, 0, 0.92);
+      pointer-events: all;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90vw;
+      max-height: 85vh;
+      transform: scale(0.8);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .lightbox-overlay.active .lightbox-content {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .lightbox-content img {
+      max-width: 100%;
+      max-height: 85vh;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      background: var(--primary);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 107, 157, 0.4);
+    }
+
+    .lightbox-close:hover {
+      background: var(--primary-dark);
+      transform: rotate(90deg) scale(1.1);
+    }
+
+    .lightbox-caption {
+      text-align: center;
+      margin-top: 15px;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
+      font-size: 1rem;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    /* ===== SECTION 4: FOOTER ===== */
+    .footer {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--bg-dark);
+      position: relative;
     }
 
     .footer-heart {
@@ -545,7 +845,7 @@
       color: var(--text-muted);
       font-size: 0.9rem;
       margin-top: 15px;
-      font-family: 'Gowun Batang', serif;
+      font-family: 'SchoolSafeMonggleMonggle', sans-serif;
     }
 
     /* ===== RESPONSIVE ===== */
@@ -570,6 +870,15 @@
         width: min(320px, 85vw);
         height: min(224px, 60vw);
       }
+
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 15px;
+      }
+
+      .memories-section {
+        padding: 80px 15px 60px;
+      }
     }
 
     @media (max-width: 480px) {
@@ -580,9 +889,15 @@
       .letter-paper::before {
         left: 20px;
       }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Fireworks Canvas -->
@@ -593,7 +908,7 @@
     <div class="hero-particles" id="hero-particles"></div>
     <div class="hero-content">
       <span class="hero-emoji">🎂</span>
-      <h1 class="hero-title">생일 축하합니다!</h1>
+      <h1 class="hero-title">생일 축하해 수빈아~!!</h1>
       <p class="hero-subtitle">오늘은 세상에서 가장 특별한 날 ✨</p>
     </div>
     <div class="scroll-indicator">
@@ -608,8 +923,8 @@
     <div class="floating-hearts" id="floating-hearts"></div>
 
     <div class="letter-intro" id="letter-intro">
-      <h2>💌 너에게 보내는 편지</h2>
-      <p>마음을 담아 한 글자 한 글자 적었어</p>
+      <h2>💌 수빈이에게 보내는 편지</h2>
+      <p></p>
     </div>
 
     <div class="envelope-wrapper" id="envelope-wrapper" onclick="openLetter()">
@@ -629,13 +944,13 @@
       <button class="letter-close-btn" onclick="closeLetter()">✕</button>
       <div class="letter-content">
         <p class="letter-date">2025년 7월 8일</p>
-        <p class="letter-greeting">사랑하는 나의 ○○에게,</p>
+        <p class="letter-greeting">사랑하는 우리 애기 수빈이에게,</p>
         <div class="letter-body">
           <!-- ✏️ 여기에 편지 내용을 작성하세요! -->
           <p>
-            생일 축하해, 내 사랑 💕
+            생일 축하해, 수빈아 💕
             오늘은 네가 이 세상에 태어난 정말 특별한 날이야.
-            너를 만난 건 내 인생에서 가장 행운이었어.
+            너를 만난 건 내 인생에서 가장 큰 행운인거 같아.
           </p>
           <p>
             매일 네 옆에 있을 수 있어서 정말 행복해.
@@ -656,6 +971,86 @@
         </div>
         <p class="letter-signature">사랑을 담아, ○○ 올림 💌</p>
       </div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 3: MEMORIES GALLERY ===== -->
+  <section class="memories-section" id="memories-section">
+    <div class="memories-header" id="memories-header">
+      <h2>📸 우리의 추억</h2>
+      <p>함께한 소중한 순간들</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item" data-caption="우리 처음 만난 날이야 💕">
+        <img src="images/1.jpeg" alt="추억 1">
+        <div class="gallery-caption">
+          <p>우리의 추억 1 💕</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="옵빠한테 잘 보이겠다고 반바지 입구와서는 아파서 가까운 옷가게에서 바지 산 날🌸">
+        <img src="images/2.jpeg" alt="추억 2">
+        <div class="gallery-caption">
+          <p>우리의 추억 2 🌸</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 3 🍰">
+        <img src="images/3.jpeg" alt="추억 3">
+        <div class="gallery-caption">
+          <p>우리의 추억 3 🍰</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 4 ✨">
+        <img src="images/4.jpeg" alt="추억 4">
+        <div class="gallery-caption">
+          <p>우리의 추억 4 ✨</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 5 ✈️">
+        <img src="images/5.jpeg" alt="추억 5">
+        <div class="gallery-caption">
+          <p>우리의 추억 5 ✈️</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 6 💑">
+        <img src="images/6.jpeg" alt="추억 6">
+        <div class="gallery-caption">
+          <p>우리의 추억 6 💑</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 7 🌅">
+        <img src="images/7.jpeg" alt="추억 7">
+        <div class="gallery-caption">
+          <p>우리의 추억 7 🌅</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 8 💖">
+        <img src="images/8.jpeg" alt="추억 8">
+        <div class="gallery-caption">
+          <p>우리의 추억 8 💖</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 9 🎉">
+        <img src="images/9.jpeg" alt="추억 9">
+        <div class="gallery-caption">
+          <p>우리의 추억 9 🎉</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-caption="우리의 추억 10 💌">
+        <img src="images/10.jpeg" alt="추억 10">
+        <div class="gallery-caption">
+          <p>우리의 추억 10 💌</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox for photo viewing -->
+  <div class="lightbox-overlay" id="lightbox">
+    <div class="lightbox-content">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightbox-img" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
     </div>
   </div>
 
@@ -946,6 +1341,30 @@
     observer.observe(letterIntro);
     observer.observe(envelopeWrapper);
 
+    // Observe memories header
+    const memoriesHeader = document.getElementById('memories-header');
+    observer.observe(memoriesHeader);
+
+    // Observe gallery items & placeholders with staggered delay
+    const galleryItems = document.querySelectorAll('.gallery-item, .gallery-item-placeholder');
+    const galleryObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger the animation based on item index
+          const index = Array.from(galleryItems).indexOf(entry.target);
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, index * 120);
+          galleryObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1,
+      rootMargin: '0px 0px -30px 0px'
+    });
+
+    galleryItems.forEach(item => galleryObserver.observe(item));
+
     // ===========================
     // 💌 LETTER MODAL
     // ===========================
@@ -968,10 +1387,43 @@
       }
     });
 
-    // Close on Escape key
+    // ===========================
+    // 🖼️ LIGHTBOX (Gallery photo viewer)
+    // ===========================
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    // Add click listeners to all gallery items
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        const caption = item.dataset.caption || '';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxCaption.textContent = caption;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    // Close on Escape key (handles both letter and lightbox)
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') closeLetter();
+      if (e.key === 'Escape') {
+        closeLetter();
+        closeLightbox();
+      }
     });
   </script>
 </body>
+
 </html>
